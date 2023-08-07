@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Weather.css";
+import axios from "axios";
 
 export default function Weather(){
  let weatherData = {
@@ -10,7 +11,14 @@ export default function Weather(){
    imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
    humidity: 70,
    wind: 8,
- };
+ }
+ let [temperature, setTemperature] = useState(null);
+ const apiKey = "e6of3eft9b8b2d2d01acb75fe44431a9";
+ const apiEndpoint = "https://api.shecodes.io/weather/v1/current";
+ let city = "London"
+ let units = "metric"
+ let apiUrl = `${apiEndpoint}?query=${city}&key=${apiKey}&units=${units}`;
+
 return (
   <div className="Weather">
     <form className="mb-3">
