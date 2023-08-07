@@ -21,6 +21,7 @@ return (
             placeholder="Type a city..."
             className="form-control"
             autoComplete="off"
+            autoFocus="on"
           />
         </div>
         <div className="col-3">
@@ -46,14 +47,14 @@ return (
           <img
             src={weatherData.imgUrl}
             alt={weatherData.description}
-            className="float-left"
+         
           />
-          <div className="float-left">
+         
             <strong>{weatherData.temperature}</strong>
             <span className="units">
               <a href="/">°C</a> | <a href="/">°F</a>
             </span>
-          </div>
+         
         </div>
       </div>
       <div className="col-6">
@@ -63,16 +64,9 @@ return (
         </ul>
       </div>
     </div>
-    <p className="link-source">
-      <a href="https://github.com/KatarinaPli/weather-react" alt="GitHub link">
-        Open-source code
-      </a>
-      , by Kateryna Shyrokova from{" "}
-      <a href="https://www.shecodes.io/graduates/68955-kateryna-shyrokova" alt="SheCodes link">
-        SheCodes
-      </a>
-    </p>
+
   </div>
+
   
 );
 

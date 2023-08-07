@@ -5,8 +5,23 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Weather />
         
-      <Weather />
+        <p className="link-source">
+          <a
+            href="https://github.com/KatarinaPli/weather-react"
+            alt="GitHub link"
+          >
+            Open-source code
+          </a>
+          , by Kateryna Shyrokova from{" "}
+          <a
+            href="https://www.shecodes.io/graduates/68955-kateryna-shyrokova"
+            alt="SheCodes link"
+          >
+            SheCodes
+          </a>
+        </p>
       </header>
     </div>
   );
