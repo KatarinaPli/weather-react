@@ -12,8 +12,8 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 .Weather .weather-temperature img {
   margin-right: 5px;
-  height: 68px;
-  width: 68px;
+  height: 100px;
+  width: 100px;
   display: inline-block;
       margin-top: unset;
     vertical-align: top;
@@ -24,7 +24,7 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 .Weather .weather-temperature strong {
   color: rgb(33, 33, 33);
   font-size: 62px;
-  line-height: 62px;
+  line-height: 100px;
   font-weight: 400;
   padding: 0%;
 

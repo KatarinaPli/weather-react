@@ -5,9 +5,7 @@ import axios from "axios";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
- const [city, setCity] = useState(props.defaultCity);
-
-
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
     console.log(response.data);
@@ -18,29 +16,28 @@ export default function Weather(props) {
       city: response.data.city,
       humidity: Math.round(response.data.temperature.humidity),
       description: response.data.condition.description,
-      imgUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${weatherData.description}.png`,
+      imgUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
       date: new Date(response.data.time * 1000),
     });
   }
 
-function handleSubmit(event){
-  event.preventDefault()
-  search();
-}
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
 
-function handleChangeCity(event){
-   setCity(event.target.value);
-}
+  function handleChangeCity(event) {
+    setCity(event.target.value);
+  }
 
-function search() {
-  const apiKey = "e6of3eft9b8b2d2d01acb75fe44431a9";
-  const apiEndpoint = "https://api.shecodes.io/weather/v1/current";
-  
-  let units = "metric";
-  let apiUrl = `${apiEndpoint}?query=${city}&key=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(handleResponse);
-}
+  function search() {
+    const apiKey = "e6of3eft9b8b2d2d01acb75fe44431a9";
+    const apiEndpoint = "https://api.shecodes.io/weather/v1/current";
 
+    let units = "metric";
+    let apiUrl = `${apiEndpoint}?query=${city}&key=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
 
   if (weatherData.ready) {
     return (
@@ -70,7 +67,7 @@ function search() {
       </div>
     );
   } else {
-search();
+    search();
     return "Loading...";
   }
 }
