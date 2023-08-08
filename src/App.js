@@ -5,8 +5,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Weather />
-        
+        <Weather defaultCity="New York" />
+
         <p className="link-source">
           <a
             href="https://github.com/KatarinaPli/weather-react"
