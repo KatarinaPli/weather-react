@@ -20,8 +20,7 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
  
 }
-
-.Weather .weather-temperature strong {
+.weather-temperature strong {
   color: rgb(33, 33, 33);
   font-size: 62px;
   line-height: 100px;
@@ -30,18 +29,18 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 }
 
-.Weather .weather-temperature .units {
+.weather-temperature .units {
   position: relative;
   font-size: 16px;
   top: -34px;
 }
 
-.Weather .weather-temperature .active {
+ .weather-temperature .active {
   color: rgb(33, 33, 33);
   cursor: default;
 }
 
-.Weather .weather-temperature .active:hover {
+ .weather-temperature .active:hover {
   text-decoration: none;
 }
 
