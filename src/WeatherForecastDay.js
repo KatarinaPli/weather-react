@@ -24,7 +24,7 @@ return (
     <div className="Weather-forecast-day">{day()}</div>
     <img
       src={props.data.condition.icon_url}
-      alt={props.data.condition.description}
+      alt={props.data.condition.description} width={60}
     />
     <div className="Weather-forecast-temperatures">
       <span className="Weather-forecast-temp-max">{maxTemperature()}</span>
